@@ -55,7 +55,7 @@ export class PostgresService {
         } else {
             d("Creating a new service");
             let config = DEFAULT_CONFIG;
-            if (process.env.PGCONNECTIONSTRING || process.env.POSTGRESQLCONNSTR_defaultconnection) {
+            if (process.env.PGCONNECTIONSTRING || process.env.POSTGRESQLCONNSTR_defaultConnection) {
                 d("Using PGCONNECTIONSTRING for connection");
                 config = Object.assign({}, DEFAULT_CONFIG,
                     PostgresService.parseConnectionString(process.env.PGCONNECTIONSTRING
